@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root to: 'pages#home'
   # get 'dresses', to: 'dresses#index'
   # get 'dresses/:id', to: 'dresses#show'

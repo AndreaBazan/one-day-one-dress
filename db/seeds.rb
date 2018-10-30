@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
 categories =  %w[evening cocktail day special]
+sizes = %w[xs s m l xl]
 
 10.times do
   user = User.create!(
@@ -15,10 +16,10 @@ categories =  %w[evening cocktail day special]
     10.times do
       dress = Dress.create(
       price: Faker::Number.between(200, 600),
-      size: Faker::Number.between(1,6),
+      size: size.sample,
       heigth: Faker::Number.between(150, 210),
-      title:Faker::Hipster.sentence(3),
-      description:Faker::Hipster.sentence(3, false, 4),
+      description:Faker::Hipster.sentence(3),
+      title:Faker::Color.color_name,
       category: categories.sample)
       user.dresses << dress
     end

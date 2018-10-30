@@ -2,12 +2,12 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
-  resources :dresses, only: %i[show index] do
+  resources :dresses, only: %i[new show index] do
     resources :rentals, only: %i[create]
   end
-  
-  # get 'dresses', to: 'dresses#index'
-  # get 'dresses/new', to: 'dresses#new'
+
+  resources :rentals, only: %i[show]
+
   # post 'dresses', to: 'dresses#create'
   # get 'dresses/:id/edit', to: 'dresses#edit'
   # patch 'dresses/:id', to 'dresses#update'

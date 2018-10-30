@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
+
+  resources :dresses, only: %i[show] do
+    resources :rentals, only: %i[create]
+  end
+  
   # get 'dresses', to: 'dresses#index'
-  # get 'dresses/:id', to: 'dresses#show'
   # get 'dresses/new', to: 'dresses#new'
   # post 'dresses', to: 'dresses#create'
   # get 'dresses/:id/edit', to: 'dresses#edit'
@@ -10,7 +14,6 @@ Rails.application.routes.draw do
   # delete 'dress/:id', to: 'dresses#destroy'
   #
   # get 'users/:id/dresses', to: 'users#dresses'
-  # post 'dresses/:id/rentals', to: 'rentals#create'
 
 end
 

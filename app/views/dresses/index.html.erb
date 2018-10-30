@@ -1,0 +1,22 @@
+<h1>Listing Dresses</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Dress</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dresses.each do |dress| %>
+      <tr>
+        <td><%= dress.title %></td>
+        <%# <td><%= link_to 'Show', dress %> </td> %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dress', new_dress_path %>

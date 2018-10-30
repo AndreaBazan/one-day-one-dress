@@ -13,4 +13,5 @@ class DressesController < ApplicationController
    def set_dress
      @dress = Dress.find(params[:id])
    end
+
 end

@@ -16,7 +16,7 @@ User.destroy_all
         price: Faker::Number.between(200, 600),
         size: Dress::SIZES.sample,
         heigth: Faker::Number.between(150, 210),
-        title:Faker::Hipster.sentence(3),
+        title:Faker::Color.color_name,
         description:Faker::Hipster.sentence(3, false, 4),
         category: Dress::CATEGORIES.sample
       )

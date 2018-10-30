@@ -1,0 +1,10 @@
+<h1><%= @dress.title %> Dress</h1>
+<p>Category: <%= @dress.category %></p>
+<p>Height: <%= @dress.heigth %> cm</p>
+<p>Size: <%= @dress.size %></p>
+<p><%= @dress.description %></p>
+
+<p>Price per day: <%= @dress.price %>$</p>
+
+<h4>What dates do you need it?</h4>
+<%= render 'rentals/form', dress: @dress, rental: @rental %>

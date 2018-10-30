@@ -1,6 +1,11 @@
 class DressesController < ApplicationController
+  before_action :set_dress, only: [:show]
   def index
     @dresses = Dress.all
+  end
+
+  def show
+    @rental = Rental.new
   end
 
   def new
@@ -28,9 +33,10 @@ class DressesController < ApplicationController
     params.require(:dress).permit(:title, :description, :category, :price, :size, :heigth)
   end
 
-  def find_dress
-    @dress = Cocktail.find(params[:id])
+  def set_dress
+    @dress = Dress.find(params[:id])
   end
+
 end
 
 

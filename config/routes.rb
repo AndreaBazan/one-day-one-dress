@@ -5,14 +5,14 @@ Rails.application.routes.draw do
   resources :dresses, only: %i[new show index create] do
     resources :rentals, only: %i[create]
   end
-  
-  # get 'dresses', to: 'dresses#index'
-  # get 'dresses/new', to: 'dresses#new'
+
+  resources :rentals, only: %i[show]
+
   # post 'dresses', to: 'dresses#create'
   # get 'dresses/:id/edit', to: 'dresses#edit'
   # # patch 'dresses/:id', to 'dresses#update'
   # delete 'dress/:id', to: 'dresses#destroy'
-  
+
   # get 'users/:id/dresses', to: 'users#dresses'
 
 end

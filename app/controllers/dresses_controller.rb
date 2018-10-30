@@ -3,5 +3,10 @@ class DressesController < ApplicationController
     @dresses = Dress.all
   end
 
-  
+  def new
+    @dress = Dress.new
+  end
+
 end
+
+

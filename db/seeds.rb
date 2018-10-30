@@ -5,3 +5,19 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+10.times do
+  user = User.create(
+    email: Faker::Internet.email,
+    password: Faker::Internet.password,)
+    10.times do
+      dress = Dress.create(
+      price: Faker::Number.between(200, 600),
+      size: Faker::Number.between(1,6),
+      heigth: Faker::Number.between(150, 210),)
+      user.dresses << dress
+    end
+end
+
+
+

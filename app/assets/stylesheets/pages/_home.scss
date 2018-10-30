@@ -10,26 +10,22 @@
   justify-content: space-between;
   width: 1265px;
 }
-
 /* Logo */
 .navbar-wagon-brand img {
   height: 50px;
 }
-
 /* User Avatar */
 .navbar-wagon .avatar {
   height: 35px;
   width: 35px;
   border-radius: 50%;
 }
-
 /* Right section */
 .navbar-wagon-right {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 /* Basic navbar item */
 .navbar-wagon-item {
   cursor: pointer;
@@ -80,6 +76,23 @@
   height: 200px;
   width: 1200px;
 }
+.btn-medium {
+  color: #999999;
+  border: 1px solid #999999;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  border: 50px;
+}
+.btn-medium:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: #999999;
+}
+.t {
+  border-radius: 50px;
+}
 .card {
   height: 175px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
@@ -87,6 +100,7 @@
   background-position: center;
   color: white;
   position: relative;
+  margin-top: 50px;
 }
 .card-user {
   position: absolute;

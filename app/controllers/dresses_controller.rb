@@ -8,7 +8,8 @@ class DressesController < ApplicationController
   end
 
   def create
-    @dress = Cocktail.new(dress_params)
+    @dress = Dress.new(dress_params)
+    @dress.user = current_user
     if @dress.save
       redirect_to dress_path(@dress)
     else
@@ -24,7 +25,7 @@ class DressesController < ApplicationController
   private
 
   def dress_params
-    params.require(:dress).permit(:title, :description, :category, :price, :size)
+    params.require(:dress).permit(:title, :description, :category, :price, :size, :heigth)
   end
 
   def find_dress

@@ -6,8 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
-categories =  %w[evening cocktail day special]
-sizes = %w[xs s m l xl]
 
 10.times do
   user = User.create!(
@@ -15,12 +13,13 @@ sizes = %w[xs s m l xl]
     password: Faker::Internet.password,)
     10.times do
       dress = Dress.create(
-      price: Faker::Number.between(200, 600),
-      size: size.sample,
-      heigth: Faker::Number.between(150, 210),
-      description:Faker::Hipster.sentence(3),
-      title:Faker::Color.color_name,
-      category: categories.sample)
+        price: Faker::Number.between(200, 600),
+        size: Dress::SIZES.sample,
+        heigth: Faker::Number.between(150, 210),
+        title:Faker::Color.color_name,
+        description:Faker::Hipster.sentence(3, false, 4),
+        category: Dress::CATEGORIES.sample
+      )
       user.dresses << dress
     end
 end

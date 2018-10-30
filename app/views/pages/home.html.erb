@@ -1,3 +1,143 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<%= link_to 'Login', new_user_session_path %>
+<div class="navbar-wagon">
+  <!-- Logo -->
+  <a href="/" class="navbar-wagon-brand">
+    <img src="images/logo.png" alt="logo">
+  </a>
+  <!-- Right Navigation -->
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+    <%= link_to 'Login', new_user_session_path %>
+    <a href="" class="navbar-wagon-item navbar-wagon-link">Rent a Dress</a>
+    <a href="" class="navbar-wagon-item navbar-wagon-link">Messages</a>
+    <!-- Profile picture with dropdown list -->
+    <div class="navbar-wagon-item">
+      <div class="dropdown">
+        <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
+        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Rent a Dress</a></li>
+          <li><a href="#">Log Out</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="home-flats">
+  <h2 class="text-center"><form action="#">
+    <label for="search"></label>
+    <input type="search" id="your-email" placeholder="Search">
+  </form>
+</h2>
+<div class="row">
+  <div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%), url('https://images.unsplash.com/photo-1443180683100-fbb2c471775e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=031a37e409af327dc2c2463f96b31efe&auto=format&fit=crop&w=900&q=60');">
+      <div class="card-category">Paris, France</div>
+      <div class="card-description">
+        <h3>Wedding Dresses</h3>
+        <p>Charming room in Montmartre</p>
+        <p class="rating">
+          <i class="fa fa-star" style="color: #ffb400"></i>
+          <i class="fa fa-star" style="color: #ffb400"></i>
+          <i class="fa fa-star" style="color: #ffb400"></i>
+          <i class="fa fa-star" style="color: #ffb400"></i>
+          <i class="fa fa-star" style="color: #cacccd"></i>
+        </p>
+      </div>
+      <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="card-user" alt="Ssaunier">
+      <a href="flats/ssaunier.html" class="card-link"></a>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%), url('https://images.unsplash.com/photo-1502443243580-56b6f292e26d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5b247b71726864e7b652172ea2b2a1b0&auto=format&fit=crop&w=900&q=60');">
+      <div class="card-category">Paris, France</div>
+      <div class="card-description">
+        <h3>Wedding Dresses</h3>
+        <p>Small flat in Tokyo</p>
+        <p class="rating">
+          <i class="fa fa-star" style="color: #ffb400"></i>
+          <i class="fa fa-star" style="color: #ffb400"></i>
+          <i class="fa fa-star" style="color: #ffb400"></i>
+          <i class="fa fa-star" style="color: #cacccd"></i>
+          <i class="fa fa-star" style="color: #cacccd"></i>
+        </p>
+      </div>
+      <img src="https://kitt.lewagon.com/placeholder/users/papillard" class="card-user" alt="Papillard">
+      <a href="flats/papillard.html" class="card-link"></a>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%), url('https://images.unsplash.com/photo-1501345167189-d8d4c5d24130?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d7282aeea268811873c2eb77e4ea523b&auto=format&fit=crop&w=900&q=60');">
+      <div class="card-category">London, UK</div>
+      <div class="card-description">
+        <h3>Travel Dresses</h3>
+        <p>Nice flat in Piccadilly</p>
+        <p class="rating">
+          <i class="fa fa-star" style="color: #ffb400"></i>
+          <i class="fa fa-star" style="color: #ffb400"></i>
+          <i class="fa fa-star" style="color: #ffb400"></i>
+          <i class="fa fa-star" style="color: #ffb400"></i>
+          <i class="fa fa-star" style="color: #ffb400"></i>
+        </p>
+      </div>
+      <img src="https://kitt.lewagon.com/placeholder/users/monsieurpaillard" class="card-user" alt="Monsieurpaillard">
+      <a href="flats/monsieurpaillard.html" class="card-link"></a>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%), url('https://images.unsplash.com/photo-1503160865267-af4660ce7bf2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3240d570a24a83a689c61811f92315f5&auto=format&fit=crop&w=900&q=60');">
+      <div class="card-category">Paris, France</div>
+      <div class="card-description">
+        <h3>Special Occasions</h3>
+        <p>Charming room in Montmartre</p>
+        <p class="rating">
+          <i class="fa fa-star" style="color: #ffb400"></i>
+          <i class="fa fa-star" style="color: #ffb400"></i>
+          <i class="fa fa-star" style="color: #ffb400"></i>
+          <i class="fa fa-star" style="color: #ffb400"></i>
+          <i class="fa fa-star" style="color: #cacccd"></i>
+        </p>
+      </div>
+      <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="card-user" alt="Ssaunier">
+      <a href="flats/ssaunier.html" class="card-link"></a>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%), url('https://images.unsplash.com/photo-1502727135886-df285cc8379f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6182683b9eb37511afe1ad1c3576e75a&auto=format&fit=crop&w=900&q=60');">
+      <div class="card-category">Paris, France</div>
+      <div class="card-description">
+        <h3>Wedding Dresses</h3>
+        <p>Small flat in Tokyo</p>
+        <p class="rating">
+          <i class="fa fa-star" style="color: #ffb400"></i>
+          <i class="fa fa-star" style="color: #ffb400"></i>
+          <i class="fa fa-star" style="color: #ffb400"></i>
+          <i class="fa fa-star" style="color: #cacccd"></i>
+          <i class="fa fa-star" style="color: #cacccd"></i>
+        </p>
+      </div>
+      <img src="https://kitt.lewagon.com/placeholder/users/papillard" class="card-user" alt="Papillard">
+      <a href="flats/papillard.html" class="card-link"></a>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%), url('https://images.unsplash.com/photo-1503475173304-5d340b3e30dc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=367ec101b3a0413de47409c23ee51b21&auto=format&fit=crop&w=900&q=60');">
+      <div class="card-category">London, UK</div>
+      <div class="card-description">
+        <h3>Day Dresses</h3>
+        <p>Nice flat in Piccadilly</p>
+        <p class="rating">
+          <i class="fa fa-star" style="color: #ffb400"></i>
+          <i class="fa fa-star" style="color: #ffb400"></i>
+          <i class="fa fa-star" style="color: #ffb400"></i>
+          <i class="fa fa-star" style="color: #ffb400"></i>
+          <i class="fa fa-star" style="color: #ffb400"></i>
+        </p>
+      </div>
+      <img src="https://kitt.lewagon.com/placeholder/users/monsieurpaillard" class="card-user" alt="Monsieurpaillard">
+      <a href="flats/monsieurpaillard.html" class="card-link"></a>
+    </div>
+  </div>
+</div>
+</div>

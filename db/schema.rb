@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 2018_10_30_172031) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "category"
+    t.string "title"
+    t.text "description"
     t.index ["user_id"], name: "index_dresses_on_user_id"
   end
 

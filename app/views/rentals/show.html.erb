@@ -1,1 +1,10 @@
-<h1><%= @rental.dress.title %> Dress</h1>
+<h1> Rent The Dress</h1>
+
+<p> You chose the <%= @rental.dress.title.capitalize %> dress </p>
+<p> It is yours from the<%= @rental.start_date %> to the<%= @rental.end_date %>. <br> It will be available for pick up anytime between those days.</p>
+
+<p>The total for the dress wil be: <%= @rental.price * (@rental.end_date - @rental.start_date).to_i  %>$</p>
+
+<button class="btn btn-danger">Pay</button>
+
+

@@ -10,12 +10,12 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Profile", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Profile", user_path(current_user), class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Rent a dress", new_dress_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Messages", "#", class: "navbar-wagon-item navbar-wagon-link" %>
 
       <% if request.path == "/" %>
-      <%= form_tag(dresses_path, {class: 'form-inline my-2 my-lg-0', method: 'get'}) do %>
+      <%= form_tag(home_path, {class: 'form-inline my-2 my-lg-0', method: 'get'}) do %>
         <%= text_field_tag :search, "", class: "form-control mr-sm-2" %>
         <%= submit_tag 'Search', class: "btn btn-outline-success my-2 my-sm-0"%>
       <% end %>&nbsp;
@@ -41,7 +41,7 @@
       </div>
     <% else %>
       <!-- Login link (when logged out) -->
-      <%= form_tag(dresses_path, {class: 'form-inline my-2 my-lg-0', method: 'get'}) do %>
+      <%= form_tag(home_path, {class: 'form-inline my-2 my-lg-0', method: 'get'}) do %>
         <%= text_field_tag :search, "", class: "form-control mr-sm-2" %>
         <%= submit_tag 'Search', class: "btn btn-outline-success my-2 my-sm-0"%>
       <% end %>&nbsp;

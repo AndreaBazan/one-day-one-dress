@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  root 'dresses#index'
+  root 'dresses#home'
+  get '/home', to: 'dresses#home'
   resources :users, only: %i[show] do
     resources :dresses, only: %i[create edit update]
   end

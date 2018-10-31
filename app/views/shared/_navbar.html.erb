@@ -1,7 +1,7 @@
 <div class="navbar-wagon">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "dress2go.png", height: 50 %>
+    <%= image_tag "logo.png", height: 50 %>
   <% end %>
 
   <!-- Right Navigation -->
@@ -11,7 +11,7 @@
 
       <!-- Links when logged in -->
       <%= link_to "Profile", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Rent a dress", new_dress_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "List a dress", new_dress_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Messages", "#", class: "navbar-wagon-item navbar-wagon-link" %>
 
       <% if request.path == "/" %>
@@ -41,9 +41,9 @@
       </div>
     <% else %>
       <!-- Login link (when logged out) -->
-      <%= form_tag(dresses_path, {class: 'form-inline my-2 my-lg-0', method: 'get'}) do %>
-        <%= text_field_tag :search, "", class: "form-control mr-sm-2" %>
-        <%= submit_tag 'Search', class: "btn btn-outline-success my-2 my-sm-0"%>
+      <%= form_tag(dresses_path, {class: 'search form-inline my-2 my-lg-0', method: 'get'}) do %>
+        <%= text_field_tag :search, '', class: "form-control mr-sm-2" %>
+        <%= submit_tag 'Search', class: " search btn btn-outline-success my-2 my-sm-0"%>
       <% end %>&nbsp;
       <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to t(".sign_up", default: "Sign up"), new_user_registration_path, class: "navbar-wagon-item navbar-wagon-link" %>

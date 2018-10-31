@@ -1,12 +1,15 @@
 class DressesController < ApplicationController
   skip_before_action :authenticate_user!, only: :home
   before_action :set_dress, only: [:show]
-  
+
   def home
     @dresses = Dress.all.search(params[:search])
-  end 
+  end
 
   def index
+    search = params[:search];
+    size = params[:size];
+    category = params[:category];
     @dresses = Dress.all.search(params[:search])
   end
 

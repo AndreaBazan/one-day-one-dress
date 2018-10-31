@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+  <div class="col-md-12">
+      
+        <h3>Edit your dress:</h3>
+        <%= simple_form_for [@user, @dress] do |f| %>
+          <%= f.input :title %>
+          <%= f.input :city %>
+          <%= f.input :size %>
+          <%= f.input :category %>
+          <%= f.input :description %>
+          <%= f.input :price %>
+          <%= f.button :submit, class: "btn btn-success" %>
+          <%= link_to("Cancel", user_path, class: "btn btn-warning") %>
+        <% end %>
+    </div>
+  </div>
+</div>

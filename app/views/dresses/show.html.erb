@@ -1,10 +1,21 @@
-<h1><%= @dress.title %> Dress</h1>
-<p>Category: <%= @dress.category %></p>
-<p>Height: <%= @dress.heigth %> cm</p>
-<p>Size: <%= @dress.size %></p>
-<p><%= @dress.description %></p>
-
-<p>Price per day: <%= @dress.price %>$</p>
-
-<h4>What dates do you need it?</h4>
-<%= render 'rentals/form', dress: @dress, rental: @rental %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6">
+      <h1><%= @dress.id %></h1>
+      <h1><%= @dress.title %></h1>
+      <h2><%= @dress.category %></h2>
+      <p><%= @dress.size %></p>
+      <p><%= @dress.price %></p>
+      <p><%= @dress.description %></p>
+    </div>
+    <div class="col-xs-6">
+      <h4>What dates do you need it?</h4>
+      <%= simple_form_for([@dress, @rental]) do |f| %>
+      <%= f.input :id %>
+      <%= f.input :start_date %>
+      <%= f.input :end_date %>
+      <%= f.submit %>
+    <% end %>
+    </div>
+  </div>
+</div>

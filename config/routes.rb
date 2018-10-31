@@ -1,30 +1,15 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'pages#home'
 
-  resources :dresses, only: %i[new show index create] do
-    resources :rentals, only: %i[create]
+  root 'dresses#index'
+  resources :users, only: %i[show] do
+    resources :dresses, only: %i[create edit update]
   end
 
+  resources :dresses, except: %i[ destroy] do
+    resources :rentals, only: %i[create]
+  end
   resources :rentals, only: %i[show]
-
-  # post 'dresses', to: 'dresses#create'
-  # get 'dresses/:id/edit', to: 'dresses#edit'
-  # # patch 'dresses/:id', to 'dresses#update'
-  # delete 'dress/:id', to: 'dresses#destroy'
-
-  # get 'users/:id/dresses', to: 'users#dresses'
+  resources :dresses, only: %i[filter]
 
 end
-
-# or
-# Rails.application.routes.draw do
-# resources :users do
-#   member do
-#     get 'dresses'
-#   end
-#
-# resources :dresses do
-#   resources :rental, only: [:create]
-# end
-# end

@@ -5,6 +5,5 @@
 
 <p>The total for the dress wil be: <%= @rental.price * (@rental.end_date - @rental.start_date).to_i  %>$</p>
 
-<button class="btn btn-danger">Pay</button>
-
+<%= link_to 'Pay', user_path(current_user), class: "btn btn-primary"  %>
 

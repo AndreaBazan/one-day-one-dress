@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root 'dresses#home'
   get '/home', to: 'dresses#home'
   resources :users, only: %i[show] do
-    resources :dresses, only: %i[create edit update]
+    resources :dresses, only: %i[index create edit update]
   end
 
   resources :dresses, except: %i[ destroy] do

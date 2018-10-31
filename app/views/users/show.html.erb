@@ -1,24 +1,28 @@
 <div class="row">
   <div class="col-md-6">
     <h3><%= @user.email %></h3>
-    <h4>My rented dresses:</h4>
+    <h4>My Dress Rentals:</h4>
     <ul>
       <% if @user.rentals.any? %>
         <% @user.rentals.each do |rental| %>
-        <li><%= rental %></li>
+        <li><%= link_to rental.dress.title, rental_path(rental) %></li>
         <% end %>
       <% else %>
         <p>You don't have any rented dresses yet. You should rent one! </p>
       <% end %>
     </ul>
     <% if @user.dresses.any? %>
-      <h3>Dresses that you have for rent:</h3>
+      <h4>My Dresses:</h4>
       <ul>
         <% @user.dresses[0..(@dresses.size - 1)].each do |dress| %>
           <li>
-            <p><strong>Title:</strong><%= dress.title %> <strong>| Description:</strong> <%= dress.description %> <strong>Size:</strong><%= dress.size%> </p>
+            <p><strong>Title:</strong><%= link_to dress.title, dress_path(dress) %> <strong>| Description:</strong> <%= dress.description %> <strong>Size:</strong><%= dress.size%> </p>
             <p><%= link_to("Edit", edit_user_dress_path(@user, dress)) %></p>
-          </li>
+            <h5>Dress current rentals:</h5>
+            <% dress.rentals.each do |rental| %>
+            <p><%= link_to rental.start_date, rental_path(rental) %></p>
+            <% end %>
+             </li>
         <% end %>
       </ul>
     <% else  %>
@@ -28,7 +32,7 @@
   <div class="col-md-6">
 
       <h3>Add a new dress for rent:</h3>
-      <%= simple_form_for [@user, @space] do |f| %>
+      <%= simple_form_for [@user, @dress] do |f| %>
         <%= f.input :title %>
         <%= f.input :category %>
         <%= f.input :description %>
@@ -37,6 +41,8 @@
         <%= f.input :price %>
         <%= f.button :submit, class: "btn btn-success" %>
       <% end %>
+
+      <br><%= link_to 'Home', home_path, class: 'btn btn-primary' %>
 
   </div>
 </div>

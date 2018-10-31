@@ -4,7 +4,6 @@
 @import "footer";
 
 .jumbotron {
-  font-family: 'Quicksand', sans-serif;
   text-align: right;
   background-image: asset-url("banner.jpg");
   width: 100%;
@@ -28,5 +27,20 @@
     font-family: 'Alegreya Sans SC', sans-serif;
     color: white;
     font-size: 50px;
+  }
+}
+
+.dresses-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  .dresses-grid-card {
+    margin: 1rem 1rem 0;
+    font-family: 'Julius Sans One', sans-serif;
+
+    a {
+      text-decoration: none;
+      font-family: 'Julius Sans One', sans-serif;
+    }
   }
 }

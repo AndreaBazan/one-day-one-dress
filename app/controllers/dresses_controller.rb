@@ -3,14 +3,14 @@ class DressesController < ApplicationController
   before_action :set_dress, only: [:show]
 
   def home
-    @dresses = Dress.all.search(params[:search])
+    @dresses = Dress.search(params[:search], params[:size], params[:category])
   end
 
   def index
-    search = params[:search];
-    size = params[:size];
-    category = params[:category];
-    @dresses = Dress.all.search(params[:search])
+    search = params[:search]
+    size = params[:size]
+    category = params[:category]
+    @dresses = Dress.search(params[:search], params[:size], params[:category])
   end
 
   def show

@@ -1,24 +1,28 @@
-<%= simple_form_for(@dress) do |f| %>
-  <%= f.error_notification %>
-  <div class="form-inputs">
-    <%= f.input :category, collection: Dress::CATEGORIES %>
-  </div>
-  <div class="form-inputs">
-    <%= f.input :title %>
-  </div>
-  <div class="form-inputs">
-    <%= f.input :description %>
-  </div>
-  <div class="form-inputs">
-    <%= f.input :price %>
-  </div>
-  <div class="form-inputs">
-    <%= f.input :heigth %>
-  </div>
-  <div class="form-inputs">
-    <%= f.input :size, collection: Dress::SIZES %>
-  </div>
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+
+<div class="container">
+ <div class="form">
+  <%= simple_form_for(@dress) do |f| %>
+     <%= f.error_notification %>
+     <div class="input">
+       <%= f.input :title %>
+     </div>
+     <div class="text-input">
+       <%= f.input :description %>
+     </div>
+     <div class="text-input">
+       <%= f.input :price %>
+     </div>
+     <div class="text-input">
+       <%= f.input :heigth %>
+     </div>
+     <div class="form-inputs">
+       <%= f.input :category, collection: Dress::CATEGORIES %>
+     </div>
+     <div class="form-inputs">
+       <%= f.input :size, collection: Dress::SIZES %>
+     </div>
+     <div class="button submit">
+       <%= f.button :submit %>
+     </div>
+   <% end %>
+ </div>

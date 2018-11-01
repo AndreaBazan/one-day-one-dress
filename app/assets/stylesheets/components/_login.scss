@@ -1,4 +1,4 @@
-.inputbox{}
+gi.inputbox{}
 
 .form{
 position:absolute;
@@ -21,12 +21,12 @@ height:40px;
   position:relative;
 }
 
-.simple_form .input-box #dress_category,
-.simple_form .input-box #dress_size,
-.simple_form .input-box #dress_description,
-.simple_form .input-box #dress_price,
-.simple_form .input-box #dress_heigth,
-.simple_form .input-box #dress_title
+.simple_form .input-box .form-control,
+//.simple_form .input-box #dress_size,
+//.simple_form .input-box #dress_description,
+//.simple_form .input-box #dress_price,
+//.simple_form .input-box #dress_heigth,
+//.simple_form .input-box #dress_title
  {
   width:100%;
   padding:10px 0;
@@ -39,7 +39,7 @@ height:40px;
 
 }
 
-.simple_form .input-box label  {
+.simple_form .input-box .form-control-label  {
   //position: relative;
   top:0;
   left:0;
@@ -57,20 +57,27 @@ label {
   line-height:50%;
   font-family: 'Alegreya Sans SC', sans-serif;
 
+
 }
 
-.simple_form button {
+.simple_form input {
   font: inherit;
+  color: white;
   line-height: normal;
   cursor: pointer;
   background-color: black;
-  color: white;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 0.14em;
-  border-radius: 5px;
-  font-size: 22px;
+
+  //text-transform: uppercase;
+  //text-align: center;
+  //letter-spacing: 0.14em;
+  //border-radius: 5px;
+  //font-size: 22px;
+  //display: block;
+  //text-align:center;
+
 }
+
+
 
 /*.simple_form .input-box #dress_title:focus + label {
   top: -25px;

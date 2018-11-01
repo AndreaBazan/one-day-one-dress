@@ -1,0 +1,26 @@
+
+ <div class="form-box">
+  <%= simple_form_for(@dress) do |f| %>
+     <%= f.error_notification %>
+     <div class="input-box">
+       <%= f.input :title %>
+     </div>
+       <div class="input-box">
+       <%= f.input :description %>
+     </div>
+     <div class="input-box">
+       <%= f.input :heigth %>
+     </div>
+     <div class="input-box">
+       <%= f.input :category, collection: Dress::CATEGORIES %>
+     </div>
+     <div class="input-box">
+       <%= f.input :size, collection: Dress::SIZES %>
+     </div>
+      <div class="input-box">
+       <%= f.input :price %>
+     </div>
+     <div class="button submit">
+       <%= f.button :submit %>
+     </div>
+   <% end %>

@@ -10,11 +10,26 @@ class Dress < ApplicationRecord
   validates :size, presence: true
   validates :heigth, presence: true
 
-  def self.search(search)
-    if search
-      self.where('title LIKE :title OR description LIKE :title', :title=> "%#{search}%")
-    else
-      Dress.all
+  scope :by_title_and_description, -> (title_or_desc){where("title @@ :title_or_desc OR description @@ :title_or_desc", title_or_desc: title_or_desc)}
+  scope :by_size, -> (size){where("size ILIKE :size", size: size)}
+  scope :by_category, -> (category){where("category ILIKE :category", category: category)}
+
+  def self.search(search, size, category)
+
+    result = Dress.all
+
+    if search.present?
+      result = result.by_title_and_description(search)
     end
+    
+    if size.present?
+      result = result.by_size(size)
+    end
+
+    if category.present?
+      result = result.by_category(category)
+    end
+
+    return result
   end
 end

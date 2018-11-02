@@ -6,4 +6,6 @@ class User < ApplicationRecord
   has_many :dresses, dependent: :destroy
   has_many :rentals
   mount_uploader :photo, PhotoUploader
+  validates :first_name, presence: true
+  validates :last_name, presence: true
 end

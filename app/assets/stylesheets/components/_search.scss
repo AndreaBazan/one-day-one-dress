@@ -14,20 +14,37 @@ git.advanced_search_container {
   justify-content: space-between;
 }
 
-#size,
-#category {
-  border-radius:none !important;
-  line-height:normal;
-  background: transparent;
-  border-top: transparent !important;
-  border-left: transparent !important;
-  border-right: transparent !important;
-  border-bottom: 1px solid !important;
-  font-weight: 200;
-  height:40px;
-  width: 40px;
-  padding: 1em 1.5em;
-  box-shadow: none !important;
-  margin:auto;
+#search {
+  width:150px;
+  padding:10px 0;
+  font-size:16px;
+  margin-bottom:10px;
+  border: transparent !important ;
+  background-color:transparent;
+  box-shadow:none;
+  border-bottom:1px solid !important;
 }
 
+#size,
+#category {
+  width:50px;
+  padding:10px 0;
+  font-size:16px;
+  margin-bottom:10px;
+  border: transparent !important ;
+  background-color:transparent;
+  box-shadow:none;
+  border-bottom:1px solid !important;
+}
+
+.search .btn {
+  text-align: center;
+  color: black;
+  font-size: 14px;
+  margin: 8px;
+  background-color: white;
+}
+.search .btn:hover {
+  color:  #616668;
+  text-decoration: none;
+}

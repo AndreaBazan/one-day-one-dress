@@ -1,9 +1,8 @@
 gi.inputbox{}
 
-.form{
-position:absolute;
+#new_dress{
+//position:relative;
 /*top:50%;*/
-left:50%;
 /*transform:translate(-50%,-50%);*/
 width:400px;
 height:40px;
@@ -61,21 +60,51 @@ label {
 
 }
 
-.simple_form .button-submit {
+ .btn {
   font: inherit;
   color: white;
   line-height: normal;
   cursor: pointer;
   background-color: black;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.14em;
+  border-radius: 5px;
+  font-size: 20px;
+  padding-left:20px ;
 
-  //text-transform: uppercase;
-  //text-align: center;
-  //letter-spacing: 0.14em;
-  //border-radius: 5px;
-  //font-size: 22px;
-  //display: block;
-  //text-align:center;
+}
 
+.btn:hover {
+  background-color:black;
+}
+
+.btn-2 {
+    letter-spacing: 0;
+}
+
+.btn-2:hover,
+.btn-2:active {
+  letter-spacing: 5px;
+}
+
+.form-check {
+  display:flex;
+  justify-content:center;
+}
+
+a[href="#/users/sing_in"] {
+    font: inherit;
+  color: white;
+  line-height: normal;
+  cursor: pointer;
+  background-color: black;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.14em;
+  border-radius: 5px;
+  font-size: 20px;
+  padding-left:20px ;
 }
 
 

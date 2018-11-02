@@ -4,7 +4,7 @@
       <div class="thumbnail">
         <div class="dress-img" style='background-image: url(<%= cl_image_path dress.photo %>)'></div>
         <div class="caption">
-          <h3><%= link_to dress.title.capitalize +  ' dress', dress_path(dress) %></h3>
+          <h3><%= link_to dress.title.capitalize, dress_path(dress) %></h3>
           <p><%= dress.description %></p>
           <p>Size: <strong><%= dress.size %></strong></p>
           <p>Category: <strong><%= dress.category %></strong></p>

@@ -9,6 +9,7 @@ class Dress < ApplicationRecord
   validates :price, presence: true
   validates :size, presence: true
   validates :heigth, presence: true
+  mount_uploader :photo, PhotoUploader
 
   scope :by_title_and_description, -> (title_or_desc){where("title @@ :title_or_desc OR description @@ :title_or_desc", title_or_desc: title_or_desc)}
   scope :by_size, -> (size){where("size ILIKE :size", size: size)}

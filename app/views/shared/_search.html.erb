@@ -2,12 +2,13 @@
     <div class="input-group" id="adv-search">
       <%= form_tag(dresses_path, {class: 'search form-inline my-2 my-lg-0', method: 'get'}) do %>
         <%= text_field_tag :search, '', class: " mr-sm-2", placeholder: "Find The Dress" %>
-        <%= select_tag :size, options_for_select(Dress::SIZES), include_blank: true, class: "select"%>
-        <%= select_tag :category, options_for_select(Dress::CATEGORIES), include_blank: true, class: "select" %>
+        <%= select_tag :size, options_for_select(Dress::SIZES), include_blank: false, class: "select", style: "border-bottom:0px solid !important; margin-left:5px;"%>
+        <%= select_tag :category, options_for_select(Dress::CATEGORIES), include_blank: false , class: "select", style: "border-bottom:0px solid !important; margin-left:5px;" %>
         <%= submit_tag 'Search', class: " search btn btn-outline-success my-2 my-sm-0 "%>
       <% end %>
     </div>
 </div>
+
 
 
 

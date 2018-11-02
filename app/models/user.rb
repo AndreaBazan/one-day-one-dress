@@ -11,4 +11,11 @@ class User < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true
 
+def photo_or_default
+  if remote_photo_url.present?
+    photo
+  else
+    DEFAULT_PHOTO_URL
+  end
+end
 end

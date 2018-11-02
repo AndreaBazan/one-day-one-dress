@@ -12,10 +12,10 @@ class User < ApplicationRecord
   validates :last_name, presence: true
 
   def photo_or_default
-    if remote_photo_url.present?
-      photo
-    else
+    if photo.file.nil?
       DEFAULT_PHOTO_URL
+    else
+      photo
     end
   end
 end

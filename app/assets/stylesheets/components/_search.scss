@@ -1,4 +1,4 @@
-git.advanced_search_container {
+.advanced_search_container {
   width: 350px !important;
   display: flex;
   justify-content: space-between;
@@ -17,7 +17,7 @@ git.advanced_search_container {
 #search {
   width:150px;
   padding:10px 0;
-  font-size:16px;
+  font-size:14px;
   margin-bottom:10px;
   border: transparent !important ;
   background-color:transparent;
@@ -27,9 +27,9 @@ git.advanced_search_container {
 
 #size,
 #category {
-  width:50px;
+  width:10%;
   padding:10px 0;
-  font-size:16px;
+  font-size:14px;
   margin-bottom:10px;
   border: transparent !important ;
   background-color:transparent;

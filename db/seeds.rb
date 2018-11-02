@@ -5,25 +5,33 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Rental.destroy_all
+Dress.destroy_all
 User.destroy_all
 
-# 10.times do
-#   user = User.create!(
-#     email: Faker::Internet.email,
-#     password: Faker::Internet.password,)
-#     5.times do
-#       dress = Dress.create(
-#         price: Faker::Number.between(200, 600),
-#         size: Dress::SIZES.sample,
-#         heigth: Faker::Number.between(150, 210),
-#         title:Faker::Color.color_name,
-#         description:Faker::Hipster.sentence(3, false, 4),
-#         category: Dress::CATEGORIES.sample,
-#         size: Dress::SIZES.sample,
-#       )
-#       user.dresses << dress
-#     end
-# end
+User.create!(
+  email: 'user@user.com',
+  password: '123456',
+  first_name: 'User',
+  last_name: 'Tester',
+  remote_photo_url: 'https://res.cloudinary.com/db30ffchh/image/upload/v1541123679/bn0h5kyddfjwaihchbig.png'
+)
 
+User.create!(
+  email: 'andrea@bazan.com',
+  password: '123456',
+  first_name: 'User',
+  last_name: 'Tester',
+  remote_photo_url: 'https://res.cloudinary.com/db30ffchh/image/upload/v1541130873/sycagu6gvwa745hqky5n.jpg'
+)
 
-
+Dress.create!(
+  price: 1200,
+  size: 'S',
+  heigth: 160,
+  title: 'Angel dress',
+  description: 'White and amazing dress',
+  category: 'day',
+  remote_photo_url: 'https://res.cloudinary.com/db30ffchh/image/upload/v1541188237/FW18-09-1.jpg',
+  user: User.last
+)

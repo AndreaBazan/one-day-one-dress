@@ -3,6 +3,10 @@
 @import "navbar";
 @import "footer";
 
+.container {
+  font-family: 'Julius Sans One', sans-serif;
+}
+
 .jumbotron {
   text-align: right;
   background-image: asset-url("banner.jpg");

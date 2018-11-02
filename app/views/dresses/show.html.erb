@@ -6,9 +6,9 @@
       <p>Size: <%= @dress.size %></p>
       <p><%= @dress.description %></p>
       <p>Length <%= @dress.heigth %>cm .</p>
-      <p>Price per day: <%= @dress.price %>$</p>
+      <p>Price per day: <%= @dress.price %>$ MXN</p>
       <div>
-        <h4>What dates do you need it?</h4>
+        <h3>What dates do you need it?</h3>
         <%= simple_form_for([@dress, @rental]) do |f| %>
         <%= f.input :start_date, wrapper_html: { class: 'flex-select' }, as: :date, html5: true %>
         <%= f.input :end_date, wrapper_html: { class: 'flex-select' }, as: :date, html5: true %>

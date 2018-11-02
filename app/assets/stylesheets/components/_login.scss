@@ -21,19 +21,20 @@ height:40px;
   position:relative;
 }
 
-.simple_form .input-box .form-control,
+//.simple_form .input-box .form-control,
 //.simple_form .input-box #dress_size,
 //.simple_form .input-box #dress_description,
 //.simple_form .input-box #dress_price,
 //.simple_form .input-box #dress_heigth,
 //.simple_form .input-box #dress_title
+.form-control
  {
   width:100%;
   padding:10px 0;
   font-size:16px;
   margin-bottom:10px;
   border: transparent !important ;
-  background:transparent;
+  background-color:transparent;
   box-shadow:none;
   border-bottom:1px solid !important;
 
@@ -60,7 +61,7 @@ label {
 
 }
 
-.simple_form input {
+.simple_form .button-submit {
   font: inherit;
   color: white;
   line-height: normal;

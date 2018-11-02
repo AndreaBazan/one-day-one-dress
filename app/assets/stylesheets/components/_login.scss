@@ -1,92 +1,114 @@
-.container{
-  font-family: 'Julius Sans One', sans-serif;
+#new_dress{
+//position:relative;
+/*top:50%;*/
+/*transform:translate(-50%,-50%);*/
+width:400px;
+height:40px;
+/*padding:10px;*/
+/*box-sizing:border-box;*/
+/*box-shadow:0 15px 25px rgba(0,0,0,0.5);*/
+/*border-radius:10px;*/
+}
+/*todo al interior del login form*/
+
+
+
+
+.simple_form .input-box {
+  position:relative;
 }
 
-.form {
-  max-width: 50em;
-  margin:auto;
-  padding: 1em 2em;
-  box-sizing: border-box;
-  overflow: hidden;
+//.simple_form .input-box .form-control,
+//.simple_form .input-box #dress_size,
+//.simple_form .input-box #dress_description,
+//.simple_form .input-box #dress_price,
+//.simple_form .input-box #dress_heigth,
+//.simple_form .input-box #dress_title
+.form-control
+ {
+  width:100%;
+  padding:10px 0;
+  font-size:16px;
+  margin-bottom:10px;
+  border: transparent !important ;
+  background-color:transparent;
+  box-shadow:none;
+  border-bottom:1px solid !important;
+
 }
 
-.form .button {
+.simple_form .input-box .form-control-label  {
+  //position: relative;
+  top:0;
+  left:0;
+  padding:5px 0;
+ /* pointer-events: none;
+  transition:.5s;*/
+
+}
+
+label {
+  text-align:center !important;
+  font-size:18px;
+  display: block;
+  text-align:center;
+  line-height:50%;
+  font-family: 'Alegreya Sans SC', sans-serif;
+
+
+}
+
+ .btn {
   font: inherit;
+  color: white;
   line-height: normal;
   cursor: pointer;
   background-color: black;
-  color: white;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 0.14em;
   border-radius: 5px;
-  font-size: 22px;
+  font-size: 20px;
+  padding-left:20px ;
+
 }
-.form .button:hover, .form .button:focus, .form .button:active {
+
+.btn:hover {
+  background-color:black;
+}
+
+.btn-2 {
+    letter-spacing: 0;
+}
+
+.btn-2:hover,
+.btn-2:active {
+  letter-spacing: 5px;
+}
+
+.form-check {
+  display:flex;
+  justify-content:center;
+}
+
+a[href="#/users/sing_in"] {
+    font: inherit;
   color: white;
-  background: black;
-}
-.form .button:active {
-  position: relative;
-  top: 1px;
-  left: 1px;
-}
-
-
-.form .field {
-  position: relative;
-  width: 100%;
-  margin-bottom: 1.5em;
-  float: left;
-}
-
-::placeholder{
-    color: gray;
-    opacity: 1;
-    font-family: "Montserrat", sans-serif;
-    font-size: 12px;
-}
-
-.text-it {
-  padding: 1em 1.5em;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  outline: none;
   line-height: normal;
-  border: 1px solid transparent;
-  border-radius: 0;
-  border-bottom: 1px solid black;
-  width: 300px;
+  cursor: pointer;
+  background-color: black;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.14em;
+  border-radius: 5px;
+  font-size: 20px;
+  padding-left:20px ;
 }
 
 
-.event{
-  color: black;
-  font-size: 30px;
-}
 
-.submit{
-
-  width: 200px;
-  height: px;
-}
+/*.simple_form .input-box #dress_title:focus + label {
+  top: -25px;
+}*/
 
 
- .form-control {
-  line-height:normal;
-  background: transparent;
-  border-top: transparent !important;
-  border-left: transparent !important;
-  border-right: transparent !important;
-  border-bottom: 1px solid !important;
-  font-weight: 200;
-  width: 300px;
-  padding: 1em 1.5em;
-  box-shadow: none !important;
-  margin:auto;
-}
-
-.form-control-label {
-  text-align:center !important;
-}

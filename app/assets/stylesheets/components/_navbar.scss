@@ -11,6 +11,8 @@
   width: 100;
   font-family: 'Julius Sans One', sans-serif;
   font-size: 20px;
+  overflow:auto;
+  padding-bottom: 5px;
 }
 
 /* Logo */
@@ -80,5 +82,5 @@
 }
 
 .search:focus {
-  
+
 }

@@ -2,7 +2,7 @@
   <%= simple_form_for(@dress) do |f| %>
      <%= f.error_notification %>
      <div class="input-box">
-       <%= f.input :title %>
+       <%= f.input :title, class: '', input_html: { class: '' } %>
      </div>
        <div class="input-box">
        <%= f.input :description %>

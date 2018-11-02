@@ -1,10 +1,15 @@
-<div class="container">
-  <h1> YOU GOT IT!</h1>
+<div class="container text-center">
+  <div class="row">
+    <div class="col-sm-12 col-md-6 col-md-offset-3" style="padding-top: 20vh">
+      <h1> YOU GOT IT!</h1>
 
-  <p> You chose the <%= @rental.dress.title.capitalize %> dress </p>
-  <p> It is yours from <%= @rental.start_date.strftime('%A, %b %d') %> to <%= @rental.end_date.strftime('%A, %b %d') %>. <br> It will be available for pick up anytime between those days.</p>
+      <p> You chose the <%= @rental.dress.title.capitalize %> dress </p>
+      <p> It is yours from <%= @rental.start_date.strftime('%A, %b %d') %> to <%= @rental.end_date.strftime('%A, %b %d') %>. <br> It will be available for pick up anytime between those days.</p>
 
-  <p>The total for the dress wil be: <%= @rental.price * (@rental.end_date - @rental.start_date).to_i  %>$</p>
+      <p>The total for the dress wil be: <%= @rental.price * (@rental.end_date - @rental.start_date).to_i  %>$</p>
 
-  <%= link_to 'Pay', user_path(current_user), class: "btn btn-primary"  %>
+      <%= link_to 'Pay', user_path(current_user), class: "btn btn-primary"%>
+    </div>
+  </div>
 </div>
+

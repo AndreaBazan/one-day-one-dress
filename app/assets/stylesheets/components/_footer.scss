@@ -1,4 +1,4 @@
-.footer {
+footer {
   padding: 45px 0px;
   font-size: 12px;
   color: #fff;
@@ -9,15 +9,12 @@
   align-items: center;
   height: 100px;
   color: black;
-  // position:relative;
-  //height:100px;
-  //margin-top:-100px;
-  //clear:both;
+  position:relative;
+  height:100px;
+  margin-top:-100px;
+  clear:both;
 }
 
-//.content {
-  //min-height: calc(100vh - 100px);
-//}
 
 .footer .fa-heart {
   color: black;

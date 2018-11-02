@@ -18,9 +18,11 @@
        <%= f.input :size, collection: Dress::SIZES %>
      </div>
       <div class="input-box">
-       <%= f.input :price %>
+       <%= f.input :photo %>
+          <%= f.input :photo_cache, as: :hidden %>
      </div>
      <div class="button submit">
        <%= f.button :submit %>
      </div>
+   <% end %>
    <% end %>

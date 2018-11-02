@@ -10,14 +10,14 @@
       <div>
         <h4>What dates do you need it?</h4>
         <%= simple_form_for([@dress, @rental]) do |f| %>
-        <%= f.input :start_date %>
-        <%= f.input :end_date %>
+        <%= f.input :start_date, wrapper_html: { class: 'flex-select' }, as: :date, html5: true %>
+        <%= f.input :end_date, wrapper_html: { class: 'flex-select' }, as: :date, html5: true %>
         <%= f.submit %>
         <% end %>
       </div>
     </div>
     <div class="col-xs-6">
-      <%= image_tag "card.jpg", height: 800 %>
+      <%= cl_image_tag @dress.photo, height: 800 %>
     </div>
   </div>
 </div>

@@ -43,7 +43,7 @@ class DressesController < ApplicationController
   private
 
   def dress_params
-    params.require(:dress).permit(:title, :description, :category, :price, :size, :heigth, :search)
+    params.require(:dress).permit(:title, :description, :category, :price, :size, :heigth, :search, :photo)
   end
 
   def set_dress
